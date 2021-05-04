@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 212, 243);
+}
+.sobrepag {
+    width: 63%;
+    height: 200px;
+    padding-right: 55px;
+    margin-left: -20px;
+    text-align: justify;
+    float: right;
+    padding-bottom: 70px;
+    font-size: medium;
+    color:black;
+}
+.apresentação_sobrapage {
+    font-size: 28px;
+
+}
+.pergunta1 {
+    margin-top: 50px;
+    font-size: medium;
+    float: left;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: justify;
+    color:black;
+    
+}
+.img {
+    width: 300px;
+    height: 400px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 130px;
+    margin-right: 5px;
+    box-shadow: 3px 3px 3px 3px #23387c;
+}
+

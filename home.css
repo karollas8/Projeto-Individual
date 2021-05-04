@@ -67,18 +67,14 @@ body {
     
   }
   
-  
   .frase_seja{
     font-family: Arial Narrow, sans-serif;
-    color: #a8119cf3;
+    color: #471a44f3;
     font-size: 60px;
     width: 80%;
     border-radius: 100px;
     float: left;
-    margin-top: 200px;
-    margin-left: 40px;
+    margin-top: 250px;
+    margin-left: 45px;
   }
-  .img{
-      width: 280px;
-      margin-left: 10px;
-  }
+  
