@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 237, 242);
+}
+
+.pag_cadastro {
+    height: 80%;
+    padding-top: 45px ;
+    margin-bottom: 20px;
+}
+
+.cadastro {
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    box-shadow: -0 0 0.5em rgb(161, 17, 137);
+    border: 1px solid #fdffff;
+    transition-duration: 00.4s;
+}
+
+.box_cadastro {
+    max-width: 90%;
+    padding: 5%;
+}
+
+.box_input {
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+    text-align: left;
+}
+
+.input_esq {
+    width: 200px;
+    float: left;
+}
+
+.input_dir {
+    width: 200px;
+    float: right;
+}
+
+.box_input span {
+    margin-top: 25px;
+    float: left;
+}
+
+.box_input input {
+    width: 100%;
+    height: 25px;
+    border: white;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.box_input input::placeholder {
+    color: rgb(78, 78, 78);
+    text-align: left;
+    font-size: 12px;
+}
+
+.box_input select {
+    width: 200px;
+    height: 25px;
+    border: white;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.div_aviso {
+    margin-top: 2%;
+    height: 35px;
+    background-color: transparent;
+}
+
+.txt_aviso {
+    color: rgb(236, 0, 0);
+    text-align: center;
+    font-size: small;
+    font-weight: bolder;
+}
+
+.btn_cadastro {
+    margin-top: 3%;
+    width: 50%;
+    height: 45px;
+    background-color: #ecacf8;
+    color: black;
+    border: #6d08c0;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.btn_cadastro:hover {
+    background-color: #a370b8;
+}
