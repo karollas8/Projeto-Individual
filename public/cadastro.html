@@ -52,20 +52,21 @@
 
                         <!-- Div para organizar os inputs na direita -->
                         <div class="input_dir">
-                            <span>Número de celular:<input type="number" id="inp_numero" placeholder="(apenas números)"></span>
+                            <span>Número de celular:<input type="number" id="inp_numero"
+                                    placeholder="(apenas números)"></span>
 
                             <span>CPF:<input type="number" id="inp_cpf" placeholder="(apenas números)"></span>
 
                             <span>CEP:<input type="number" id="inp_cep" placeholder="(apenas números)"></span>
 
                             <span>Seu aniversário:<input type="date" id="inp_aniver" placeholder=""></span>
-                            
+
 
 
                         </div>
-                        
+
                     </form>
-                    
+
                 </div>
                 <br><input id="checkbox" type="checkbox">Aceito e concordo com a política de privacidade</input>
 
@@ -76,26 +77,60 @@
 
 </html>
 <script>
-    
+
     function analisar() {
         var email = inp_email.value;
 
 
-    if (inp_nome.value == '' || inp_email.value == '' || inp_usuario.value == '' || inp_senha.value == '' || inp_numero.value == '' || inp_cpf.value == '' || inp_cep.value == '' || inp_aniver.value == '') {
-        alert('Preencha todos os campos corretamente!');
-        
+        if (inp_nome.value == '' || inp_email.value == '' || inp_usuario.value == '' || inp_senha.value == '' || inp_numero.value == '' || inp_cpf.value == '' || inp_cep.value == '' || inp_aniver.value == '') {
+            alert('Preencha todos os campos corretamente!');
 
-    } else if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
-        alert('Informe um email válido');
-        
 
-    } else if ((inp_numero.value >= 0)) {
-        window.location.href = "login.html";
+        } else if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
+            alert('Informe um email válido');
 
-    } else {
-        alert('Alguns campos só aceitam números. Verifique novamente');
-        
+
+        } else if ((inp_numero.value >= 0)) {
+            window.location.href = "login.html";
+
+        } else {
+            alert('Alguns campos só aceitam números. Verifique novamente');
+
+        }
+
+    }
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
     }
 
-}
+    function aguardar() {
+        btn_entrar.disabled = true;
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        div_erro.style.display = 'block';
+    }
 </script>
